@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fonts/euclid-circular-a/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <a class="nav__back text__16" href="#">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back</span>
+            </a>
+            <a class="nav__logo" href="#">
+                <img src="img/logo.svg" width="76" height="22" alt="">
+            </a>
+            <a class="nav__skip text__16" href="#">
+                Skip
+            </a>
+        </nav>
+        <div class="slider">
+            <div class="container">
+                <div class="slide__bars">
+                    <span class="slide__bar"></span>
+                    <span class="slide__bar"></span>
+                    <span class="slide__bar slide__bar--active"></span>
+                </div>
+                <h1 class="slider__title">
+                    Connect your bank card
+                </h1>
+                <p class="section__text text__14">
+                    You'll get discounted prices when shopping with Slash using this card. Your data will be stored on secure servers using industry standard encryption and will not be shared with any third party. 
+                </p>    
+            </div>
+        </div>
+        <section class="card__section">
+            <div class="container">
+                <div class="card">
+                    <img src="img/chip.svg" width="36" height="29" alt="card chip">
+                    <form action="">
+                        <div class="card__info">
+                            <label class="text__14" for="card-number">Card number</label>
+                            <input id="card-number" type="text" maxlength="19" name="card-number" class="cc-number-input card__number">
+                        </div>
+                        <div class="card__info">
+                            <label class="text__14" for="card-holder">Cardholder name</label>
+                            <input id="card-holder" type="text" name="card-holder">
+                        </div>
+                        <div class="card__info">
+                            <label class="text__14" for="card-date">Expiry date</label>
+                            <input id="card-date" type="text" maxlength="5" name="card-date" class="cc-expiry-input">
+                        </div>
+                        <div class="card__info">
+                            <label for="card-cvv" class="card-cvv text__14">
+                                CVV/CVC 
+                                <span class="card__tooltip">
+                                    <i class="fa-sharp fa-solid fa-exclamation"></i>
+                                    <div class="tooltip__content">
+                                        <p class="tooltip__text text__14">3 digits on the back of your card.</p>
+                                    </div>
+                                </span>
+                            </label>
+                            <input id="card-cvv" type="text" maxlength="3" class="cc-cvc-input">
+                        </div>
+                    </form>
+                </div>
+                <div class="footer">
+                    <div class="card-footer1">
+                        <div class="footer_1">
+                            <a href="#" class="footer__btn text__16">
+                                Connect
+                                <img src="img/security.svg" width="17" height="16" alt="">
+                            </a>
+                            <p>We'll charge and refund €1 to check if the card is valid.</p>    
+                        </div>
+                        <div class="footer_">
+                            <a href="#">
+                                <img src="img/visa.svg" width="40" height="21"  alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/idcheck.svg" width="36" height="25" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/dss.svg" width="71" height="28" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+	
+            </div>
+        </section>
+    </div>
+
+
+    <script src="js/JQuery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
