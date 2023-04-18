@@ -101,6 +101,17 @@ img {
     border: 2px solid var(--color-blue);
     line-height: 140%;
     color: var(--color-blue);
+    -webkit-transition: 0.3s ease all;
+    -o-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+.nav__skip:hover {
+    color: #1B4DFF;
+    border-color: #1B4DFF;
+}
+.nav__skip:active {
+    color: #0024A4;
+    border-color: #0024A4;
 }
 @media (max-width: 768px) {
     .nav__logo {
@@ -187,6 +198,7 @@ img {
 .card {
     position: relative;
     z-index: 10;
+    height: 333px;
     font-size: 0;
     padding: 28px 28px 35px;
 }
@@ -305,12 +317,72 @@ img {
 .crd-cnt {
     display: inline-block;
 }
+@media (max-width: 631px) {
+    .card {
+        padding: 28px 0px 35px 28px;
+    }
+    #card-number {
+        width: calc(299px + (404 - 299) * ((100vw - 375px) / (631 - 375)));
+    }
+    #card-holder {
+        width: calc(184px + (289 - 184) * ((100vw - 375px) / (631 - 375)));
+    }
+}
+@media (max-width: 620px) {
+    .card__info:nth-child(3) {
+        margin-right: 56px;
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        height: 432px;
+    }
+    .card__info:nth-child(4) {
+        display: block;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 438px) {
+    .card__info:nth-child(3) {
+        margin-right: 0;
+    }
+}
 @media (max-width: 375px) {
     #card-number {
         width: 285px;
     }
     #card-holder {
         width: 184px;
+    }
+}
+@media (max-width: 356px) {
+    .card__info {
+        display: block;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .card__info input {
+        width: 100% !important;
+    }
+    .card__info:nth-child(4) {
+        margin-top: 0px;
+    }
+    .card::before {
+        width: 100%;
+        height: 100%;
+    }
+    .card::after {
+        display: none;
+    }
+    .card {
+        padding: 21px;
+        height: auto;
     }
 }
 #tooltip {
@@ -331,17 +403,6 @@ img {
 .card-cvv {
     position: relative;
 }
-@media (max-width: 375px) {
-    .card__info:nth-child(4) {
-        display: block;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: 20px;
-        margin-top: 30px;
-    }
-}
 
 .tooltip__content {
     display: none;
@@ -351,6 +412,7 @@ img {
     width: 174px;
     height: 100px;
     color: #FFFFFF;
+    z-index: 10;
 }
 .card__tooltip:hover .tooltip__content {
     display: -webkit-box;
@@ -450,6 +512,9 @@ img {
 .footer__btn:hover {
     background: #1B4DFF;
 }
+.footer__btn:active {
+    background: #0024A4;
+}
 .card-footer1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -461,7 +526,7 @@ img {
         -ms-flex-align: center;
             align-items: center;
 }
-@media (max-width: 375px) {
+@media (max-width: 546px) {
     .card-footer1 {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
